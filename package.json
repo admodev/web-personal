@@ -10,12 +10,14 @@
     "build-gz": "webpack -p --mode production --env.compress",
     "build-render": "rm -R dist ; npm run build && npm run pre-render",
     "pre-render": "react-snap"
-
   },
   "license": "MIT",
   "reactSnap": {
     "source": "dist",
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
     "minifyHtml": {
       "sortClassName": false,
       "removeComments": true
@@ -53,5 +55,6 @@
     "webpack": "^4.28.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.1.11"
-  }
+  },
+  "main": "index.js"
 }
